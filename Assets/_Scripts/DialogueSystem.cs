@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class DialogueSystem : MonoBehaviour
 {
+   /* [System.Serializable]
+    public class DialogueGroup 
+        //Different dialogue groups, as there needs to be separation between the start dialogue, then the dialogue after writing name, then dialogue after beating name 
+    {
+        public string name;
+        public List<string> dialogueLines = new List<string>();
+    }*/
+
     public static DialogueSystem Instance { get; private set; }
 
     public TMPro.TextMeshProUGUI textDisplay;
@@ -12,6 +20,7 @@ public class DialogueSystem : MonoBehaviour
 
     public bool isDialogueActive = false;
 
+    //public List<DialogueGroup> dialogueGroups = new List<DialogueGroup>();
     public List<string> dialogueLines = new List<string>();
 
     public void OnEnable()
@@ -102,4 +111,9 @@ public class DialogueSystem : MonoBehaviour
         DisplayDialoguePanel(true);
         DisplayNextDialogueMessage();
     }
+
+   /* public void LoadDialogueGroup(string name)
+    {
+
+    }*/
 }

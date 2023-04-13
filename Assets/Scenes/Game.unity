@@ -2270,7 +2270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15.049988}
+  m_AnchoredPosition: {x: 0, y: -15.050049}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &729435155
@@ -7663,11 +7663,29 @@ MonoBehaviour:
   textDisplay: {fileID: 893429793}
   dialoguePanel: {fileID: 494052379}
   isDialogueActive: 0
+  dialogueGroups:
+  - name: 
+    dialogueLines:
+    - 
+    - 
+    - 
   dialogueLines:
-  - Hello Player, nice to meet you.
-  - This is beat unworthies.
-  - Where you can beat up those who have wronged you.
-  - This is just a game, dont be evil with it.
+  - Wai! *waves* Hey you there!
+  - You look like there's someone in your life that needs taking down a peg or two.
+  - Why don't you pull up a chair, and tell Granny who's been grinding your gears
+    lately?
+  - Don't worry, Granny's got you!
+  - I've got just the right kind of shoe to smite them with, too!
+  - Why don't you have a go too? It'll be quicker and more effective with both of
+    us going at it!
+  - Brilliant! That should do it!
+  - Say, you seem like a dab hand at this! I've actually been looking for an apprentice
+    to take over when I retire. This spot under the bridge is a good one and it would
+    be a shame if nobody were here to take care of things when I retire. Are you
+    at all interested in learning from old Granny?
+  - Each week we'll progress your apprenticeship by meeting clients who come to you
+    with the names and deeds of their petty enemies. I'll stand by and coach you
+    until I feel you are ready to take over from me. How about it?
 --- !u!1 &967294060
 GameObject:
   m_ObjectHideFlags: 0
