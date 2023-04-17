@@ -7664,28 +7664,33 @@ MonoBehaviour:
   dialoguePanel: {fileID: 494052379}
   isDialogueActive: 0
   dialogueGroups:
-  - name: 
+  - name: Intro
     dialogueLines:
-    - 
-    - 
-    - 
-  dialogueLines:
-  - Wai! *waves* Hey you there!
-  - You look like there's someone in your life that needs taking down a peg or two.
-  - Why don't you pull up a chair, and tell Granny who's been grinding your gears
-    lately?
-  - Don't worry, Granny's got you!
-  - I've got just the right kind of shoe to smite them with, too!
-  - Why don't you have a go too? It'll be quicker and more effective with both of
-    us going at it!
-  - Brilliant! That should do it!
-  - Say, you seem like a dab hand at this! I've actually been looking for an apprentice
-    to take over when I retire. This spot under the bridge is a good one and it would
-    be a shame if nobody were here to take care of things when I retire. Are you
-    at all interested in learning from old Granny?
-  - Each week we'll progress your apprenticeship by meeting clients who come to you
-    with the names and deeds of their petty enemies. I'll stand by and coach you
-    until I feel you are ready to take over from me. How about it?
+    - Wai! *waves* Hey you there!
+    - You look like there's someone in your life that needs taking down a peg or
+      two.
+    - Why don't you pull up a chair, and tell Granny who's been grinding your gears
+      lately?
+  - name: PreNameWriting
+    dialogueLines:
+    - Don't worry, Granny's got you!
+    - I've got just the right kind of shoe to smite them with, too!
+  - name: PreSmiting
+    dialogueLines:
+    - 'Why don''t you have a go too? It''ll be quicker and more effective with the
+      both of us going at it! '
+  - name: PostSmiting
+    dialogueLines:
+    - Brilliant! That should do it!
+    - Say, you seem like a dab hand at this!
+    - " I\u2019ve actually been looking for an apprentice to take over when I retire.
+      This spot under the bridge is a good one and it would be a shame if nobody
+      were here to take care of things when I retire. Are you at all interested in
+      learning from old Granny?"
+    - "Each week we\u2019ll progress your apprenticeship by meeting clients who come
+      to you with the names and deeds of their petty enemies. I\u2019ll stand by
+      and coach you until I feel you are ready to take over from me. How about it?"
+  dialogueLines: []
 --- !u!1 &967294060
 GameObject:
   m_ObjectHideFlags: 0

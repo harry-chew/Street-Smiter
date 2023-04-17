@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class DialogueSystem : MonoBehaviour
 {
-   /* [System.Serializable]
-    public class DialogueGroup 
-        //Different dialogue groups, as there needs to be separation between the start dialogue, then the dialogue after writing name, then dialogue after beating name 
+    [System.Serializable]
+    public class DialogueGroup
+    //Different dialogue groups, as there needs to be separation between the start dialogue, then the dialogue after writing name, then dialogue after beating name 
     {
         public string name;
         public List<string> dialogueLines = new List<string>();
-    }*/
+    }
 
     public static DialogueSystem Instance { get; private set; }
 
@@ -20,7 +20,7 @@ public class DialogueSystem : MonoBehaviour
 
     public bool isDialogueActive = false;
 
-    //public List<DialogueGroup> dialogueGroups = new List<DialogueGroup>();
+    public List<DialogueGroup> dialogueGroups = new List<DialogueGroup>();
     public List<string> dialogueLines = new List<string>();
 
     public void OnEnable()
@@ -30,13 +30,11 @@ public class DialogueSystem : MonoBehaviour
 
     private void HandleFirstDialogue()
     {
-        string[] dialogueLinesArray = new string[dialogueLines.Count];
-
-        for (int i = 0; i < dialogueLines.Count; i++)
-        {
-            dialogueLinesArray[i] = dialogueLines[i];
-        }
-        ReplaceDialogue(dialogueLinesArray);
+        dialogueLines.Clear();
+        //to handle first dialogue, load the first/intro dialogueGroup
+        LoadDialogueGroup("Intro");
+        
+        //ReplaceDialogue(dialogueLinesArray);
     }
 
     public void Awake()
@@ -112,8 +110,16 @@ public class DialogueSystem : MonoBehaviour
         DisplayNextDialogueMessage();
     }
 
-   /* public void LoadDialogueGroup(string name)
+    public void LoadDialogueGroup(string name)
     {
-
-    }*/
+        //get the dialogueGroup by name (from list in dialogueGroups
+        //replace the dialogueLines array/List w the one from dialogueGroup
+        foreach (var dialogueGroup in dialogueGroups)
+        {
+            if (dialogueGroup.name == name)
+            {
+                AddNewDialogue(dialogueGroup.dialogueLines);
+            }
+        }
+    }
 }
