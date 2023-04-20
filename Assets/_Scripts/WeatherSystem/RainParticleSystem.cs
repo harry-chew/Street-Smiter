@@ -21,4 +21,14 @@ public class RainParticleSystem : MonoBehaviour
     {
         Debug.Log("handle it");
     }
+
+    public void StartRain()
+    {
+        _rainParticleSystem.Play();
+    }
+
+    public void StopRain()
+    {
+        _rainParticleSystem.Stop();
+    }
 }
