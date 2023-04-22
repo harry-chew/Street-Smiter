@@ -139,7 +139,8 @@ public class DialogueSystem : MonoBehaviour
         int index = UnityEngine.Random.Range(0, audioClips.Length);
         AudioClip clip = audioClips[index];
 
-        // Play the chosen clip 
+        // Play the chosen clip
+        AudioSource.PlayClipAtPoint(clip, player.transform.position);
 
     }
 }
