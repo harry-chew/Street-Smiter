@@ -7,6 +7,7 @@ public class LineGenerator : MonoBehaviour
     [SerializeField] private GameObject _linePrefab;
     [SerializeField] private Line _activeLine;
     [SerializeField] private Camera _camera;
+    [SerializeField] private InputManager inputManager;
 
     private void Start()
     {
@@ -14,20 +15,25 @@ public class LineGenerator : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+
+        if (Input.GetMouseButtonDown(0)) //inputManager.touchHeld
         {
+            //Debug.Log("Held");
             GameObject newLine = Instantiate(_linePrefab);
             _activeLine = newLine.GetComponent<Line>();
         }
 
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0)) //!inputManager.touchHeld
         {
+            //Debug.Log("Not held");
             _activeLine = null;
         }
 
         if (_activeLine != null)
         {
-            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+            //now getting the screen position is the issue
+            //screen position not working with device simulator (also still not showing up on main game)
+            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition); //inputManager.mousePosition
             _activeLine.UpdateLine(mousePosition);
         }
     }
