@@ -7664,7 +7664,6 @@ MonoBehaviour:
   textDisplay: {fileID: 893429793}
   dialoguePanel: {fileID: 494052379}
   isDialogueActive: 0
-<<<<<<< HEAD
   dialogueGroups:
   - name: Intro
     dialogueLines:
@@ -7693,12 +7692,6 @@ MonoBehaviour:
       to you with the names and deeds of their petty enemies. I\u2019ll stand by
       and coach you until I feel you are ready to take over from me. How about it?"
   dialogueLines: []
-=======
-  dialogueLines:
-  - Hello Player, nice to meet you.
-  - This is beat unworthies.
-  - Where you can beat up those who have wronged you.
-  - This is just a game, dont be evil with it.
   audioClips:
   - {fileID: 8300000, guid: 82f23df329b2b374cb2b20bc1443fb20, type: 3}
   - {fileID: 8300000, guid: 54b249302552c834ea2c3b4bd330619f, type: 3}
@@ -7709,7 +7702,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a0df4ecd5d7954e499a372a7194331fb, type: 3}
   - {fileID: 8300000, guid: 2c9a16588e01cc346988b36ae16a4a29, type: 3}
   player: {fileID: 2063281716}
->>>>>>> main
 --- !u!1 &967294060
 GameObject:
   m_ObjectHideFlags: 0
