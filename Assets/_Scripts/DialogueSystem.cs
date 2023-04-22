@@ -114,19 +114,6 @@ public class DialogueSystem : MonoBehaviour
         DisplayNextDialogueMessage();
     }
 
-    public void LoadDialogueGroup(string name)
-    {
-        //get the dialogueGroup by name (from list in dialogueGroups
-        //replace the dialogueLines array/List w the one from dialogueGroup
-        foreach (var dialogueGroup in dialogueGroups)
-        {
-            if (dialogueGroup.name == name)
-            {
-                AddNewDialogue(dialogueGroup.dialogueLines);
-            }
-        }
-    }
-
     public void PlayDialogueAudio()
     {
         if (audioClips.Length == 0)
@@ -141,5 +128,17 @@ public class DialogueSystem : MonoBehaviour
 
         // Play the chosen clip 
 
+    public void LoadDialogueGroup(string name)
+    {
+        //get the dialogueGroup by name (from list in dialogueGroups
+        //replace the dialogueLines array/List w the one from dialogueGroup
+        foreach (var dialogueGroup in dialogueGroups)
+        {
+            if (dialogueGroup.name == name)
+            {
+                AddNewDialogue(dialogueGroup.dialogueLines);
+            }
+        }
     }
+
 }
