@@ -140,7 +140,6 @@ public class DialogueSystem : MonoBehaviour
         AudioClip clip = audioClips[index];
 
         // Play the chosen clip 
-        AudioSource.PlayClipAtPoint(clip, player.transform.position);
-    }
 
+    }
 }

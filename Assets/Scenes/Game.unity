@@ -1995,7 +1995,7 @@ GameObject:
   - component: {fileID: 662050487}
   - component: {fileID: 662050489}
   m_Layer: 0
-  m_Name: sound
+  m_Name: ambient sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2011,7 +2011,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b4f8b0288e6c8264db3ae933aad0d349, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 01e155c88d5668c4b98cc2eae0ea3613, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7664,6 +7664,7 @@ MonoBehaviour:
   textDisplay: {fileID: 893429793}
   dialoguePanel: {fileID: 494052379}
   isDialogueActive: 0
+<<<<<<< HEAD
   dialogueGroups:
   - name: Intro
     dialogueLines:
@@ -7692,6 +7693,23 @@ MonoBehaviour:
       to you with the names and deeds of their petty enemies. I\u2019ll stand by
       and coach you until I feel you are ready to take over from me. How about it?"
   dialogueLines: []
+=======
+  dialogueLines:
+  - Hello Player, nice to meet you.
+  - This is beat unworthies.
+  - Where you can beat up those who have wronged you.
+  - This is just a game, dont be evil with it.
+  audioClips:
+  - {fileID: 8300000, guid: 82f23df329b2b374cb2b20bc1443fb20, type: 3}
+  - {fileID: 8300000, guid: 54b249302552c834ea2c3b4bd330619f, type: 3}
+  - {fileID: 8300000, guid: 2bfce8792c72a71488c0ef3683f2ab35, type: 3}
+  - {fileID: 8300000, guid: 25716374dedc2514a9f516b7c8c0e5a2, type: 3}
+  - {fileID: 8300000, guid: 9e2914aee063f55458759d47cc99be98, type: 3}
+  - {fileID: 8300000, guid: 4dc85e9f2eb00564e923ca5133c3d86c, type: 3}
+  - {fileID: 8300000, guid: a0df4ecd5d7954e499a372a7194331fb, type: 3}
+  - {fileID: 8300000, guid: 2c9a16588e01cc346988b36ae16a4a29, type: 3}
+  player: {fileID: 2063281716}
+>>>>>>> main
 --- !u!1 &967294060
 GameObject:
   m_ObjectHideFlags: 0
