@@ -15,6 +15,7 @@ public class LineGenerator : MonoBehaviour
     }
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0)) //inputManager.touchHeld
         {
             //Debug.Log("Held");
