@@ -128,6 +128,8 @@ public class DialogueSystem : MonoBehaviour
 
         // Play the chosen clip 
 
+    }
+
     public void LoadDialogueGroup(string name)
     {
         //get the dialogueGroup by name (from list in dialogueGroups
