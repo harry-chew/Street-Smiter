@@ -1995,7 +1995,7 @@ GameObject:
   - component: {fileID: 662050487}
   - component: {fileID: 662050489}
   m_Layer: 0
-  m_Name: sound
+  m_Name: ambient sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2011,7 +2011,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b4f8b0288e6c8264db3ae933aad0d349, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 01e155c88d5668c4b98cc2eae0ea3613, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2270,7 +2270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15.049988}
+  m_AnchoredPosition: {x: 0, y: -15.050049}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &729435155
@@ -2457,7 +2457,6 @@ GameObject:
   m_Component:
   - component: {fileID: 820812757}
   - component: {fileID: 820812756}
-  - component: {fileID: 820812755}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2465,18 +2464,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &820812755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820812754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa7eb07ff4262842a8fb87958504d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &820812756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2552,6 +2539,7 @@ GameObject:
   - component: {fileID: 889319005}
   - component: {fileID: 889319004}
   - component: {fileID: 889319003}
+  - component: {fileID: 889319006}
   m_Layer: 0
   m_Name: RainSystem
   m_TagString: Untagged
@@ -2648,7 +2636,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -7374,6 +7362,19 @@ Transform:
   m_Father: {fileID: 1421138653}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889319006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889319002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c3cb6b37b237f438b35ea9aabc2af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rainParticleSystem: {fileID: 0}
 --- !u!1 &893429791
 GameObject:
   m_ObjectHideFlags: 0
@@ -7663,11 +7664,44 @@ MonoBehaviour:
   textDisplay: {fileID: 893429793}
   dialoguePanel: {fileID: 494052379}
   isDialogueActive: 0
-  dialogueLines:
-  - Hello Player, nice to meet you.
-  - This is beat unworthies.
-  - Where you can beat up those who have wronged you.
-  - This is just a game, dont be evil with it.
+  dialogueGroups:
+  - name: Intro
+    dialogueLines:
+    - Wai! *waves* Hey you there!
+    - You look like there's someone in your life that needs taking down a peg or
+      two.
+    - Why don't you pull up a chair, and tell Granny who's been grinding your gears
+      lately?
+  - name: PreNameWriting
+    dialogueLines:
+    - Don't worry, Granny's got you!
+    - I've got just the right kind of shoe to smite them with, too!
+  - name: PreSmiting
+    dialogueLines:
+    - 'Why don''t you have a go too? It''ll be quicker and more effective with the
+      both of us going at it! '
+  - name: PostSmiting
+    dialogueLines:
+    - Brilliant! That should do it!
+    - Say, you seem like a dab hand at this!
+    - " I\u2019ve actually been looking for an apprentice to take over when I retire.
+      This spot under the bridge is a good one and it would be a shame if nobody
+      were here to take care of things when I retire. Are you at all interested in
+      learning from old Granny?"
+    - "Each week we\u2019ll progress your apprenticeship by meeting clients who come
+      to you with the names and deeds of their petty enemies. I\u2019ll stand by
+      and coach you until I feel you are ready to take over from me. How about it?"
+  dialogueLines: []
+  audioClips:
+  - {fileID: 8300000, guid: 82f23df329b2b374cb2b20bc1443fb20, type: 3}
+  - {fileID: 8300000, guid: 54b249302552c834ea2c3b4bd330619f, type: 3}
+  - {fileID: 8300000, guid: 2bfce8792c72a71488c0ef3683f2ab35, type: 3}
+  - {fileID: 8300000, guid: 25716374dedc2514a9f516b7c8c0e5a2, type: 3}
+  - {fileID: 8300000, guid: 9e2914aee063f55458759d47cc99be98, type: 3}
+  - {fileID: 8300000, guid: 4dc85e9f2eb00564e923ca5133c3d86c, type: 3}
+  - {fileID: 8300000, guid: a0df4ecd5d7954e499a372a7194331fb, type: 3}
+  - {fileID: 8300000, guid: 2c9a16588e01cc346988b36ae16a4a29, type: 3}
+  player: {fileID: 2063281716}
 --- !u!1 &967294060
 GameObject:
   m_ObjectHideFlags: 0
@@ -8966,6 +9000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421138653}
   - component: {fileID: 1421138654}
+  - component: {fileID: 1421138655}
   m_Layer: 0
   m_Name: WeatherSystem
   m_TagString: Untagged
@@ -9002,6 +9037,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5311f5f776d67ab40ba2c620f4435029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1421138655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421138652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3726f324bee6df442a3857dba321c56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainSystem: {fileID: 889319006}
+  windSystem: {fileID: 2058097464}
 --- !u!1 &1476436182
 GameObject:
   m_ObjectHideFlags: 0

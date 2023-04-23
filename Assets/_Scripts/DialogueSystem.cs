@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class DialogueSystem : MonoBehaviour
 {
+    [System.Serializable]
+    public class DialogueGroup
+    //Different dialogue groups, as there needs to be separation between the start dialogue, then the dialogue after writing name, then dialogue after beating name 
+    {
+        public string name;
+        public List<string> dialogueLines = new List<string>();
+    }
+
     public static DialogueSystem Instance { get; private set; }
 
     public TMPro.TextMeshProUGUI textDisplay;
@@ -12,7 +20,11 @@ public class DialogueSystem : MonoBehaviour
 
     public bool isDialogueActive = false;
 
+    public List<DialogueGroup> dialogueGroups = new List<DialogueGroup>();
     public List<string> dialogueLines = new List<string>();
+
+    public AudioClip[] audioClips = new AudioClip[8];
+    public GameObject player;
 
     public void OnEnable()
     {
@@ -21,13 +33,11 @@ public class DialogueSystem : MonoBehaviour
 
     private void HandleFirstDialogue()
     {
-        string[] dialogueLinesArray = new string[dialogueLines.Count];
-
-        for (int i = 0; i < dialogueLines.Count; i++)
-        {
-            dialogueLinesArray[i] = dialogueLines[i];
-        }
-        ReplaceDialogue(dialogueLinesArray);
+        dialogueLines.Clear();
+        //to handle first dialogue, load the first/intro dialogueGroup
+        LoadDialogueGroup("Intro");
+        
+        //ReplaceDialogue(dialogueLinesArray);
     }
 
     public void Awake()
@@ -100,6 +110,37 @@ public class DialogueSystem : MonoBehaviour
         }
 
         DisplayDialoguePanel(true);
+        PlayDialogueAudio();
         DisplayNextDialogueMessage();
+    }
+
+    public void LoadDialogueGroup(string name)
+    {
+        //get the dialogueGroup by name (from list in dialogueGroups
+        //replace the dialogueLines array/List w the one from dialogueGroup
+        foreach (var dialogueGroup in dialogueGroups)
+        {
+            if (dialogueGroup.name == name)
+            {
+                AddNewDialogue(dialogueGroup.dialogueLines);
+            }
+        }
+    }
+
+    public void PlayDialogueAudio()
+    {
+        if (audioClips.Length == 0)
+        {
+            Debug.LogError("Audio clip array is empty!");
+            return;
+        }
+
+        // Choose a random clip from the array 
+        int index = UnityEngine.Random.Range(0, audioClips.Length);
+        AudioClip clip = audioClips[index];
+
+        // Play the chosen clip
+        AudioSource.PlayClipAtPoint(clip, player.transform.position);
+
     }
 }
