@@ -19,12 +19,8 @@ public class LineGenerator : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) //inputManager.touchHeld
         {
-<<<<<<< Updated upstream
             //Debug.Log("Held");
-            GameObject newLine = Instantiate(_linePrefab);
-=======
             GameObject newLine = Instantiate(_linePrefab, parentTransform);
->>>>>>> Stashed changes
             _activeLine = newLine.GetComponent<Line>();
         }
 
