@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class DialogueSystem : MonoBehaviour
 {
+    public static Action<string> OnDialogueStart;
+    public static Action<string> OnDialogueEnd;
+
+    [SerializeField] private string _currentDialogueGroupName;
+
     [System.Serializable]
     public class DialogueGroup
     //Different dialogue groups, as there needs to be separation between the start dialogue, then the dialogue after writing name, then dialogue after beating name 
@@ -83,10 +88,12 @@ public class DialogueSystem : MonoBehaviour
         dialogueLines.RemoveAt(0);
         if (dialogueLines.Count <= 0 || dialogueLines == null)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             DisplayDialoguePanel(false);
+            OnDialogueEnd?.Invoke(_currentDialogueGroupName);
         }
         isDialogueActive = false;
+
     }
 
 
@@ -98,6 +105,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         DisplayDialoguePanel(true);
+        PlayDialogueAudio();
         DisplayNextDialogueMessage();
     }
 
@@ -140,6 +148,8 @@ public class DialogueSystem : MonoBehaviour
             if (dialogueGroup.name == name)
             {
                 AddNewDialogue(dialogueGroup.dialogueLines);
+                _currentDialogueGroupName = dialogueGroup.name;
+                OnDialogueStart?.Invoke(_currentDialogueGroupName);
             }
         }
     }
