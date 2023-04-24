@@ -5,6 +5,7 @@ using UnityEngine;
 public class LineGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject _linePrefab;
+    [SerializeField] private Transform parentTransform;
     [SerializeField] private Line _activeLine;
     [SerializeField] private Camera _camera;
     [SerializeField] private InputManager inputManager;
@@ -19,7 +20,7 @@ public class LineGenerator : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) //inputManager.touchHeld
         {
             //Debug.Log("Held");
-            GameObject newLine = Instantiate(_linePrefab);
+            GameObject newLine = Instantiate(_linePrefab, parentTransform);
             _activeLine = newLine.GetComponent<Line>();
         }
 
