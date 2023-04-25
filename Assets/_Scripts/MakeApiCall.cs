@@ -11,7 +11,7 @@ namespace APICall{
         //Powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a>
         private static string _url = "http://api.weatherapi.com/v1/current.json";
         private static string _apiKey = "?key=607673592df841cdb14133226221305";
-        private static string _query = "&q=auto:ip&aqi=no"; //send ip address for automatic ip lookup instead?
+        private static string _query = "&q=auto:ip&aqi=no"; 
 
         public static Weather GetWeather()
         {
