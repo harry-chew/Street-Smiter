@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2040930347789470655}
   - component: {fileID: 4516787249825858965}
   - component: {fileID: 5354052068293732110}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,8 +85,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.04748535
-        value: 0.16980743
+        time: 0.06424332
+        value: 0.08176422
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -129,12 +129,12 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 1
-    textureMode: 0
+    textureMode: 4
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
 --- !u!114 &5354052068293732110
