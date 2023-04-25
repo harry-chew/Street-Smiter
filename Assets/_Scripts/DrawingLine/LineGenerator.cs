@@ -20,21 +20,19 @@ public class LineGenerator : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) //inputManager.touchHeld
         {
             //Debug.Log("Held");
-            GameObject newLine = Instantiate(_linePrefab, parentTransform);
+            GameObject newLine = Instantiate(_linePrefab, parentTransform); //generates around 200 units away from the parent, which is roughly equal to the mousePosition as converted from screen to world point
             _activeLine = newLine.GetComponent<Line>();
         }
 
         if (Input.GetMouseButtonUp(0)) //!inputManager.touchHeld
         {
-            //Debug.Log("Not held");
             _activeLine = null;
         }
 
         if (_activeLine != null)
         {
-            //now getting the screen position is the issue
-            //screen position not working with device simulator (also still not showing up on main game)
-            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition); //inputManager.mousePosition
+            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition); //inputManager.mousePosition does get correct position, but touchHeld bool currently not working
+            //Debug.Log("Old system mousePosition: " + mousePosition);
             _activeLine.UpdateLine(mousePosition);
         }
     }

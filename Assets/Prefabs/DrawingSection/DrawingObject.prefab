@@ -30,8 +30,9 @@ Transform:
   m_Children:
   - {fileID: 5930252002503825013}
   - {fileID: 5930252003015205023}
+  - {fileID: 5930252001393299054}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5930252001393299055
 GameObject:
@@ -59,12 +60,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5930252001393299055}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.03}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.030006409}
   m_LocalScale: {x: 9, y: 16, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5930252002018769577}
+  m_Father: {fileID: 8005902731065774289}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5930252001393299059
@@ -269,7 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5930252002018769577}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DrawHere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,8 +288,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5930252001393299054}
+  m_Children: []
   m_Father: {fileID: 5930252002503825013}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
