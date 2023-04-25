@@ -148,6 +148,7 @@ public class DialogueSystem : MonoBehaviour
             if (dialogueGroup.name == name)
             {
                 AddNewDialogue(dialogueGroup.dialogueLines);
+                //set the current dialogue group name and then fire event with it for the gameloop.cs script to pick up
                 _currentDialogueGroupName = dialogueGroup.name;
                 OnDialogueStart?.Invoke(_currentDialogueGroupName);
             }

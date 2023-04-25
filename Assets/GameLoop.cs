@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameLoop : MonoBehaviour
 {
+    public SetDrawing drawing;
     private void OnEnable()
     {
         DialogueSystem.OnDialogueStart += HandleDialogueStart;
@@ -27,6 +28,7 @@ public class GameLoop : MonoBehaviour
                 break;
             case "PreNameWriting":
                 //do something
+
                 break;
             case "PreSmiting":
                 //do something
@@ -47,9 +49,12 @@ public class GameLoop : MonoBehaviour
             case "Intro":
                 //start prename writing event
                 DialogueSystem.Instance.LoadDialogueGroup("PreNameWriting");
+                //move camera into sitting position
                 break;
             case "PreNameWriting":
                 //do something
+                Debug.Log("Load drawing section");
+                drawing.TurnOnDrawing();
                 break;
             case "PreSmiting":
                 //do something
