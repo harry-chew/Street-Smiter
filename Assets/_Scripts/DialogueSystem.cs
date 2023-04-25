@@ -30,6 +30,7 @@ public class DialogueSystem : MonoBehaviour
 
     public AudioClip[] audioClips = new AudioClip[8];
     public GameObject player;
+    [SerializeField] private AudioSource _audioSource;
 
     public void OnEnable()
     {
@@ -80,11 +81,13 @@ public class DialogueSystem : MonoBehaviour
     {
         if (dialogueLines.Count <= 0 || dialogueLines == null) yield return null;
         isDialogueActive = true;
+        PlayDialogueAudio();
         foreach (char letter in dialogueLines[0].ToCharArray())
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(0.05f);
         }
+        
         dialogueLines.RemoveAt(0);
         if (dialogueLines.Count <= 0 || dialogueLines == null)
         {
@@ -93,7 +96,7 @@ public class DialogueSystem : MonoBehaviour
             OnDialogueEnd?.Invoke(_currentDialogueGroupName);
         }
         isDialogueActive = false;
-
+        StopDialogueAudio();
     }
 
 
@@ -105,7 +108,6 @@ public class DialogueSystem : MonoBehaviour
         }
 
         DisplayDialoguePanel(true);
-        PlayDialogueAudio();
         DisplayNextDialogueMessage();
     }
 
@@ -118,25 +120,30 @@ public class DialogueSystem : MonoBehaviour
         }
 
         DisplayDialoguePanel(true);
-        PlayDialogueAudio();
         DisplayNextDialogueMessage();
     }
 
     public void PlayDialogueAudio()
     {
-        if (audioClips.Length == 0)
+        if (audioClips.Length == 0 || audioClips == null)
         {
             Debug.LogError("Audio clip array is empty!");
             return;
         }
 
         // Choose a random clip from the array 
-        int index = UnityEngine.Random.Range(0, audioClips.Length);
+        int index = UnityEngine.Random.Range(0, audioClips.Length - 1);
         AudioClip clip = audioClips[index];
 
+        //add audio clip to audio source
+        _audioSource.clip = clip;
         // Play the chosen clip
-        AudioSource.PlayClipAtPoint(clip, player.transform.position);
+        _audioSource.Play();
+    }
 
+    public void StopDialogueAudio()
+    {
+        _audioSource.Stop();
     }
 
     public void LoadDialogueGroup(string name)
