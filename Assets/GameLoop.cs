@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameLoop : MonoBehaviour
 {
     public SetDrawing drawing;
+    public SetSlapping slapping;
     private void OnEnable()
     {
         DialogueSystem.OnDialogueStart += HandleDialogueStart;
@@ -58,6 +59,7 @@ public class GameLoop : MonoBehaviour
                 break;
             case "PreSmiting":
                 //do something
+                slapping.TurnOnSlapping();
                 break;
             case "PostSmiting":
                 //do something
