@@ -10,6 +10,8 @@ public class StartSmitingPhase : MonoBehaviour
     public void StartSmiting()
     {
         drawing.TurnOffDrawing();
-        slapping.TurnOnSlapping();
+        //load the dialogue before slapping, turn on slapping in HandleDialogueEnd
+        DialogueSystem.Instance.LoadDialogueGroup("PreSmiting");
+        //slapping.TurnOnSlapping();
     }
 }
