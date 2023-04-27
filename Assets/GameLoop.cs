@@ -7,6 +7,8 @@ public class GameLoop : MonoBehaviour
 {
     public SetDrawing drawing;
     public SetSlapping slapping;
+    public AnimatorHandler animatorHandler;
+
     private void OnEnable()
     {
         DialogueSystem.OnDialogueStart += HandleDialogueStart;
