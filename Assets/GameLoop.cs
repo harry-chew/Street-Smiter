@@ -8,6 +8,7 @@ public class GameLoop : MonoBehaviour
     public SetDrawing drawing;
     public SetSlapping slapping;
     [SerializeField] private SmashBar smashBar;
+    [SerializeField] private GameObject shoe;
 
     private void OnEnable()
     {
@@ -37,7 +38,7 @@ public class GameLoop : MonoBehaviour
                 //do something
                 break;
             case "PostSmiting":
-                
+                shoe.SetActive(false);
                 //do something
                 break;
             default:
