@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43479934, g: 0.4818492, b: 0.56277674, a: 1}
+  m_IndirectSpecularColor: {r: 0.43724096, g: 0.48499256, b: 0.56526446, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 69, y: 192}
+  m_AnchoredPosition: {x: 69, y: 0}
   m_SizeDelta: {x: 100, y: 1200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &70516005
@@ -1270,23 +1270,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseButtonText: {fileID: 79457000}
   isPaused: 0
---- !u!114 &820812759 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2445067494470090591, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
-  m_PrefabInstance: {fileID: 2445067495268344968}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188751642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3e6c7ea7067b243b53ffdad48bf86f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &820812760 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2445067494470090576, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
   m_PrefabInstance: {fileID: 2445067495268344968}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188751642}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 647bbfd2633190c4fac2639ca2f5a129, type: 3}
@@ -1644,26 +1633,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd954a15aa21b5b4193ca92e8fc72b9e, type: 3}
---- !u!1 &1188751642 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2445067494470090586, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
+--- !u!114 &1188751646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3991886479301199073, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
   m_PrefabInstance: {fileID: 2445067495268344968}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1188751646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188751642}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcafed964c7de4b44b60deb67dd51668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawing: {fileID: 820812759}
-  slapping: {fileID: 820812760}
-  _animator: {fileID: 607892155}
 --- !u!1001 &1355612652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2315,6 +2295,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2445067494470090576, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
+      propertyPath: smashBar
+      value: 
+      objectReference: {fileID: 70516007}
+    - target: {fileID: 2445067494470090576, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
       propertyPath: playerArm
       value: 
       objectReference: {fileID: 1025725325}
@@ -2382,13 +2366,14 @@ PrefabInstance:
       propertyPath: drawing
       value: 
       objectReference: {fileID: 1899698026}
+    - target: {fileID: 3991886479301199073, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 607892155}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2445067494470090586, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1188751646}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dcf755ea6c1827489cc11f79b411bb9, type: 3}
 --- !u!1001 &3467605294029675856
 PrefabInstance:
@@ -2527,6 +2512,39 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 494052379}
+    - target: {fileID: 4024503591402627447, guid: f44facf772ca1d24ea9fc64860475814, type: 3}
+      propertyPath: dialogueGroups.Array.data[4].name
+      value: PostSmiting
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024503591402627447, guid: f44facf772ca1d24ea9fc64860475814, type: 3}
+      propertyPath: dialogueGroups.Array.data[4].dialogueLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024503591402627447, guid: f44facf772ca1d24ea9fc64860475814, type: 3}
+      propertyPath: dialogueGroups.Array.data[4].dialogueLines.Array.data[0]
+      value: Brilliant! That should do it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024503591402627447, guid: f44facf772ca1d24ea9fc64860475814, type: 3}
+      propertyPath: dialogueGroups.Array.data[4].dialogueLines.Array.data[1]
+      value: Say, you seem like a dab hand at this!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024503591402627447, guid: f44facf772ca1d24ea9fc64860475814, type: 3}
+      propertyPath: dialogueGroups.Array.data[4].dialogueLines.Array.data[2]
+      value: " I\u2019ve actually been looking for an apprentice to take over when
+        I retire. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024503591402627447, guid: f44facf772ca1d24ea9fc64860475814, type: 3}
+      propertyPath: dialogueGroups.Array.data[4].dialogueLines.Array.data[3]
+      value: 'his spot under the bridge is a good one and it would be a shame if
+        nobody were here to take care of things when I retire. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024503591402627447, guid: f44facf772ca1d24ea9fc64860475814, type: 3}
+      propertyPath: dialogueGroups.Array.data[4].dialogueLines.Array.data[4]
+      value: "Each week we\u2019ll progress your apprenticeship by meeting clients
+        who come to you with the names and deeds of their petty enemies. I\u2019ll
+        stand by and coach you until I feel you are ready to take over from me. How
+        about it?"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

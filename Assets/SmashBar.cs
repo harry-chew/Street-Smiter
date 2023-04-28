@@ -20,11 +20,13 @@ public class SmashBar : MonoBehaviour
     private void OnEnable()
     {
         ReadAccelerometer.OnSlap += HandleSlap;
+        OnSmashBarEmpty += SmashBarEmpty;
     }
 
     private void OnDisable()
     {
         ReadAccelerometer.OnSlap -= HandleSlap;
+        OnSmashBarEmpty -= SmashBarEmpty;
     }
 
     private void HandleSlap()
@@ -42,6 +44,7 @@ public class SmashBar : MonoBehaviour
         image.color = startColor;
         height = image.rectTransform.sizeDelta.y;
         image.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, height);
+        image.enabled = false;
     }
 
     private void Update()
@@ -76,5 +79,22 @@ public class SmashBar : MonoBehaviour
     {
         Debug.Log("Smash bar empty -> this should load next section of game");
         OnSmashBarEmpty?.Invoke();
+    }
+
+    private void SmashBarEmpty()
+    {
+        DialogueSystem.Instance.LoadDialogueGroup("PostSmiting");
+        DisableSmashBar();
+        //DisableSmashBar();
+    }
+
+    public void EnableSmashBar()
+    {
+        image.enabled = true;
+    }
+
+    public void DisableSmashBar() 
+    {
+        image.enabled = false;
     }
 }
