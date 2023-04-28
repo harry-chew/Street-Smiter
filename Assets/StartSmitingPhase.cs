@@ -7,17 +7,19 @@ public class StartSmitingPhase : MonoBehaviour
     [SerializeField] private SetDrawing drawing;
     [SerializeField] private SetSlapping slapping;
     [SerializeField] private AnimatorHandler _animator;
-    
+    [SerializeField] private GameObject shoe;
+
     public void StartSmiting()
     {
+        shoe.SetActive(true);
         _animator.PlayTargetAnimation("Slapping");
-        StartCoroutine(LoadDialogue()); //currently does not work because drawingObject is disabled w/ next statement
+        StartCoroutine(LoadDialogue());
         drawing.TurnOffDrawing();
     }
 
     IEnumerator LoadDialogue()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.5f);
         DialogueSystem.Instance.LoadDialogueGroup("PreSmiting");
         
     }

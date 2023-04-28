@@ -10,7 +10,8 @@ public class GameLoop : MonoBehaviour
     public SetSlapping slapping;
     [SerializeField] private SmashBar smashBar;
     [SerializeField] private WritingHelp drawingHelpPanel;
-
+    [SerializeField] private GameObject shoe;
+    
     private void OnEnable()
     {
         DialogueSystem.OnDialogueStart += HandleDialogueStart;
@@ -39,7 +40,7 @@ public class GameLoop : MonoBehaviour
                 break;
             case "PostSmiting":
                 slapping.TurnOffSlapping();
-                //do something
+                shoe.SetActive(false);
                 break;
             default:
                 break;
