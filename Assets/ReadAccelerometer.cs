@@ -22,8 +22,7 @@ public class ReadAccelerometer : MonoBehaviour
 
         if (acceleration.y >= 0f && !shouldSlap)
         {
-            Debug.Log("slap");
-            PlayAudioOnce();
+            Slap();
             shouldSlap = true;
         }
 
@@ -37,5 +36,11 @@ public class ReadAccelerometer : MonoBehaviour
     public void PlayAudioOnce()
     {
         audioSource.PlayOneShot(audioSource.clip);
+    }
+
+    public void Slap()
+    {
+        Debug.Log("slap");
+        PlayAudioOnce();
     }
 }
