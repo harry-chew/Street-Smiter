@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLoop : MonoBehaviour
 {
@@ -9,8 +10,9 @@ public class GameLoop : MonoBehaviour
     public SetSlapping slapping;
     [SerializeField] private SmashBar smashBar;
     [SerializeField] private AnimatorHandler animatorHandler;
+    [SerializeField] private WritingHelp drawingHelpPanel;
     [SerializeField] private GameObject shoe;
-
+    
     private void OnEnable()
     {
         DialogueSystem.OnDialogueStart += HandleDialogueStart;
@@ -36,9 +38,9 @@ public class GameLoop : MonoBehaviour
 
                 break;
             case "PreSmiting":
-                //do something
                 break;
             case "PostSmiting":
+                slapping.TurnOffSlapping();
                 shoe.SetActive(false);
                 animatorHandler.StopAnimation();
                 break;
@@ -61,6 +63,7 @@ public class GameLoop : MonoBehaviour
                 //do something
                 Debug.Log("Load drawing section");
                 drawing.TurnOnDrawing();
+                drawingHelpPanel.DisplayPanel();
                 break;
             case "PreSmiting":
                 //do something
@@ -69,6 +72,8 @@ public class GameLoop : MonoBehaviour
                 break;
             case "PostSmiting":
                 //do something
+                Debug.Log("This is the end of the game for the moment.");
+                SceneManager.LoadScene("Menu");
                 break;
             default:
                 break;
