@@ -7,7 +7,7 @@ public class GameLoop : MonoBehaviour
 {
     public SetDrawing drawing;
     public SetSlapping slapping;
-    public AnimatorHandler animatorHandler;
+    [SerializeField] private SmashBar smashBar;
 
     private void OnEnable()
     {
@@ -37,6 +37,7 @@ public class GameLoop : MonoBehaviour
                 //do something
                 break;
             case "PostSmiting":
+                
                 //do something
                 break;
             default:
@@ -62,6 +63,7 @@ public class GameLoop : MonoBehaviour
             case "PreSmiting":
                 //do something
                 slapping.TurnOnSlapping();
+                
                 break;
             case "PostSmiting":
                 //do something

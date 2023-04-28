@@ -68,10 +68,10 @@ MonoBehaviour:
     dialogueLines:
     - Brilliant! That should do it!
     - Say, you seem like a dab hand at this!
-    - " I\u2019ve actually been looking for an apprentice to take over when I retire.
-      This spot under the bridge is a good one and it would be a shame if nobody
-      were here to take care of things when I retire. Are you at all interested in
-      learning from old Granny?"
+    - " I\u2019ve actually been looking for an apprentice to take over when I retire. "
+    - 'This spot under the bridge is a good one and it would be a shame if nobody
+      were here to take care of things when I retire. '
+    - Are you at all interested in learning from old Granny?
     - "Each week we\u2019ll progress your apprenticeship by meeting clients who come
       to you with the names and deeds of their petty enemies. I\u2019ll stand by
       and coach you until I feel you are ready to take over from me. How about it?"
@@ -86,3 +86,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a0df4ecd5d7954e499a372a7194331fb, type: 3}
   - {fileID: 8300000, guid: 2c9a16588e01cc346988b36ae16a4a29, type: 3}
   player: {fileID: 0}
+  _audioSource: {fileID: 0}
