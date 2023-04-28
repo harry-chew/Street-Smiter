@@ -9,6 +9,7 @@ public class GameLoop : MonoBehaviour
     public SetDrawing drawing;
     public SetSlapping slapping;
     [SerializeField] private SmashBar smashBar;
+    [SerializeField] private AnimatorHandler animatorHandler;
     [SerializeField] private WritingHelp drawingHelpPanel;
     [SerializeField] private GameObject shoe;
     
@@ -41,6 +42,7 @@ public class GameLoop : MonoBehaviour
             case "PostSmiting":
                 slapping.TurnOffSlapping();
                 shoe.SetActive(false);
+                animatorHandler.StopAnimation();
                 break;
             default:
                 break;
