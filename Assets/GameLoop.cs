@@ -73,7 +73,7 @@ public class GameLoop : MonoBehaviour
             case "PostSmiting":
                 //do something
                 Debug.Log("This is the end of the game for the moment.");
-                SceneManager.LoadScene("Menu");
+                Application.Quit();
                 break;
             default:
                 break;
