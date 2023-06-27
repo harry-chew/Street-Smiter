@@ -3,7 +3,8 @@ guid: 184d0255afcc69b4b95a72600e15bdbe
 ShaderImporter:
   externalObjects: {}
   defaultTextures:
-  - _Texture0: {fileID: 2800000, guid: f63f2d375ed2a2843889377612053517, type: 3}
+  - _Noise: {fileID: 2800000, guid: f63f2d375ed2a2843889377612053517, type: 3}
+  - _TextureSample0: {fileID: 2800000, guid: 4b57a6210b522ed42bc1397bc0a5a4d9, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 
