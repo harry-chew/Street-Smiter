@@ -22,7 +22,8 @@ Texture2D:
   m_MipCount: 1
   m_IsReadable: 1
   m_IsPreProcessed: 0
-  m_IgnoreMasterTextureLimit: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
   m_StreamingMipmaps: 0
   m_StreamingMipmapsPriority: 0
   m_VTOnly: 0
@@ -49,74 +50,42 @@ Texture2D:
     path: 
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NatureScene_Car 1
-  m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
-  m_ShaderKeywords: DR_ENABLE_LIGHTMAP_DIR DR_LIGHT_ATTENUATION DR_OUTLINE_ON DR_RIM_ON
-    DR_SPECULAR_ON _ALPHATEST_ON _DETAILMAPBLENDINGMODE_ADD _TEXTUREBLENDINGMODE_MULTIPLY
+  m_Shader: {fileID: -6465566751694194690, guid: 28375c8afd8fa4900b90e1d5a4b6d88c, type: 3}
+  m_Parent: {fileID: 2100000, guid: bead49387c4574893addf631d4cdfddd, type: 2}
+  m_ModifiedSerializedProperties: 8
+  m_ValidKeywords:
+  - BILLBOARD_ROTATION_NOTHING
+  - _USE_FILL_TEXTURE
+  m_InvalidKeywords:
+  - DR_ENABLE_LIGHTMAP_DIR
+  - DR_LIGHT_ATTENUATION
+  - DR_OUTLINE_ON
+  - DR_RIM_ON
+  - DR_SPECULAR_ON
+  - _ALPHATEST_ON
+  - _DETAILMAPBLENDINGMODE_ADD
+  - _TEXTUREBLENDINGMODE_MULTIPLY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BakedGIRamp:
+    - Fill_Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _BaseMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _CelCurveTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _CelStepTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ColorGradient:
-        m_Texture: {fileID: 2800000, guid: 2e7beb66582a84a69b56c496a4a4916e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ColorGradientRamp:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ColorGradientTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
+    - Shape_Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -124,135 +93,51 @@ Material:
         m_Texture: {fileID: -6772730646660194369}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _LightAttenuationRamp:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
+    - _ShadingGradientTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - BILLBOARD_ROTATION: 0
+    - Billboard_Scale: 1
+    - Clip_Threshold: 0.5
+    - Fill_Impact: 0.5
+    - Fill_Scale: 1
+    - Offset_Along_Normal: 0
     - _AlphaClip: 1
-    - _Blend: 0
-    - _BumpScale: 1
-    - _CameraDistanceImpact: 0.5
-    - _CelExtraEnabled: 1
-    - _CelNumSteps: 3
-    - _CelPrimaryMode: 1
-    - _ClearCoatMask: 0
-    - _ClearCoatSmoothness: 0
     - _Cull: 0
     - _Cutoff: 0
-    - _DetailAlbedoMapScale: 1
     - _DetailMapBlendingMode: 1
     - _DetailMapImpact: 0.03
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EnvironmentReflections: 1
+    - _FRESNEL: 0
     - _FlatRimEdgeSmoothness: 0.013
     - _FlatRimLightAlign: 0.199
     - _FlatRimSize: 0
-    - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.294
-    - _Flatness: 1
-    - _FlatnessExtra: 0.75
-    - _GlossMapScale: 0
-    - _Glossiness: 0
-    - _GlossyReflections: 0
-    - _GradientAngle: 0
-    - _GradientCenterX: 0
+    - _FresnelToggleUpgrade: 0
     - _GradientCenterY: 1.17
-    - _GradientEnabled: 0
     - _GradientSize: 1.36
     - _LightContribution: 0
-    - _LightFalloffSize: 0
     - _LightmapDirectionPitch: 4
     - _LightmapDirectionYaw: 250
-    - _Metallic: 0
-    - _OcclusionStrength: 1
-    - _OutlineDepthOffset: 0
-    - _OutlineEnabled: 1
-    - _OutlineWidth: 0.89
-    - _OverrideBakedGi: 0
     - _OverrideLightAttenuation: 1
     - _OverrideLightmapDir: 1
-    - _Parallax: 0.005
-    - _QueueOffset: 0
-    - _ReceiveShadows: 1
     - _RimEnabled: 1
     - _SelfShadingSize: 0.423
-    - _SelfShadingSizeExtra: 0
-    - _ShadowEdgeSize: 0.871
-    - _ShadowEdgeSizeExtra: 0.153
-    - _Smoothness: 0.5
-    - _SmoothnessTextureChannel: 0
+    - _ShadowStrength: 1
     - _SpecularEnabled: 1
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Surface: 0
-    - _TextureBlendingMode: 0
     - _TextureImpact: 0
-    - _UnityShadowMode: 2
-    - _UnityShadowOcclusion: 0
-    - _UnityShadowPower: 0.257
-    - _UnityShadowSharpness: 3
-    - _VertexColorsEnabled: 0
-    - _WindDirection: 0
-    - _WindEnabled: 0
-    - _WindFrequency: 0.2
-    - _WindIntensity: 0.2
-    - _WindNoise: 0.2
-    - _WindSpeed: 0.2
-    - _WorkflowMode: 1
-    - _ZWrite: 1
+    - _WIND: 0
     m_Colors:
+    - Fresnel_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
     - _BaseColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorDim: {r: 0.6792453, g: 0.6760413, b: 0.6760413, a: 1}
-    - _ColorDimCurve: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
-    - _ColorDimExtra: {r: 0, g: 0, b: 0, a: 1}
-    - _ColorDimSteps: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
     - _ColorGradient: {r: 0.8867924, g: 0.47267708, b: 0.47267708, a: 1}
-    - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.03502196, g: 0.033953354, b: 0.066037714, a: 1}
     - _FlatSpecularColor: {r: 2, g: 1.9137255, b: 1.6862745, a: 1}
     - _LightAttenuation: {r: 0.47322688, g: 0.55884004, b: 0, a: 0}
     - _LightmapDirection: {r: -0.06554964, g: 0.9975641, b: -0.023858113, a: 0}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0.745283, g: 0.37112498, b: 0.12304199, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _UnityShadowColor: {r: 0.36485818, g: 0.08610716, b: 0.4245283, a: 0.3137255}
   m_BuildTextureStacks: []
 --- !u!114 &2873338400957594487
 MonoBehaviour:
@@ -266,4 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 4
+  version: 7
